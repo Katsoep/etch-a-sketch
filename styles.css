@@ -1,0 +1,16 @@
+.square-con {
+    display: flex;
+   justify-content: space-between;
+    align-items: space-between;
+   
+    width: 960px;    
+    height: 960px;
+    border: 1px solid black;
+    flex-wrap: wrap;
+}
+.single-square {
+    border: 1px solid black;
+    display: flex;
+    flex: 1 0 21%;
+     
+}
