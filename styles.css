@@ -12,5 +12,8 @@
     border: 1px solid black;
     display: flex;
     flex: 1 0 21%;
-     
+}
+
+.color-me {
+    background-color: aquamarine;
 }
