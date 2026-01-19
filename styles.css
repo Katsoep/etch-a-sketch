@@ -17,3 +17,11 @@
 .color-me {
     background-color: aquamarine;
 }
+#reset-btn {
+    width: 4em;
+    height: 4em;
+    background-color: blanchedalmond;
+    font-size: 14px;
+    border: 2px dotted black;
+    
+}
