@@ -1,5 +1,6 @@
 .square-con {
     display: flex;
+    /* flex-direction: column; */
    justify-content: space-between;
     align-items: space-between;
    
@@ -8,12 +9,22 @@
     border: 1px solid black;
     flex-wrap: wrap;
 }
+
 .single-square {
     border: 1px solid black;
     display: flex;
-    flex: 1 0 21%;
+    min-height: 1px;
+    min-width: 1px;
+    flex: 0 1 auto;
 }
 
 .color-me {
     background-color: aquamarine;
+}
+#reset-btn {
+    width: 4em;
+    height: 4em;
+    background-color: blanchedalmond;
+    font-size: 14px;
+    border: 2px dotted black;
 }
