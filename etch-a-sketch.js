@@ -11,9 +11,9 @@ resetBtn.addEventListener("click", () => {
         parseInt(size);
          if (size <= 100){
             log.innerText = (size + " x " + size);
-            let quotient = getQuotient(size);
-            console.log(quotient);
-            createGrid(quotient);
+            // let quotient = getQuotient(size);
+            // console.log(quotient);
+            createGrid(+size);
         } else {
             log.innerText = "Not a valid amount";
         }
@@ -23,28 +23,22 @@ resetBtn.addEventListener("click", () => {
 
 })
 
-//  //create 16x16 grid
-// for (let i = 0; i < 16; i++) {
-//     const newDiv = document.createElement("div");
-//     newDiv.classList.add("single-square");
-//     gridCon.appendChild(newDiv);
-// }
-
-
-
 function createGrid (amount) {
       console.log("im the amount " + amount);
     while (gridCon.hasChildNodes()) {
         gridCon.removeChild(gridCon.firstChild);
     }
-    for (let i = 0; i < amount; i++) {
-        const newDiv = document.createElement("div");
-        newDiv.classList.add("single-square");
-        newDiv.style.height = (amount - 2);
-        newDiv.style.width = (amount - 2);
-        gridCon.appendChild(newDiv);
-    }
 
+    for (let i = 0; i < amount; i++) {
+    const subCon = document.createElement("div");
+    subCon.classList.add("row-square");
+    gridCon.appendChild(subCon);
+        for (let i = 0; i < amount; i++){
+            const square = document.createElement("div");
+            square.classList.add("single-square");
+            subCon.appendChild(square);
+        }
+    }
      //change color on hover
     const singleSquares = document.querySelectorAll(".single-square");
     singleSquares.forEach ( square => {
@@ -63,7 +57,3 @@ function getQuotient (promptNum) {
     }  
     }
 }
-//amount / i++
-// if amount % i == 0
-// amount == quotient 
-// quotient == grid height & width
